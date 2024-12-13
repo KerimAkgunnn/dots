@@ -106,7 +106,7 @@ const NotificationPanelWidget = () =>
         },
     })
 
-const PanelRevealer = () =>
+export const PanelRevealer = () =>
     Widget.Box({
         css: "padding-right: 2px;",
         child: Widget.Revealer({

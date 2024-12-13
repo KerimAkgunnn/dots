@@ -3,8 +3,8 @@ import WorkspaceWidget from "./workspace"
 import PlayerWidget from "./player"
 import Clock from "./clock"
 import SystemTray from "./systemTray"
-import InfoWidget from "./info"
 import Battery from "./battery"
+import InfoWidget from "./info"
 
 const BarWidget = () =>
     Widget.CenterBox({
@@ -21,7 +21,7 @@ const BarWidget = () =>
         endWidget: Widget.Box({
             className: "bar-right-container",
             hpack: "end",
-            children: [SystemTray(), InfoWidget(),Battery(), PowerButton()],
+            children: [SystemTray(), InfoWidget(), Battery(), PowerButton()],
         }),
     })
 
