@@ -21,4 +21,9 @@ kdeglobals
 mimeapps.list
 QtProject.conf
 sddm/
-.env
+discord/
+Electron/
+obs-studio/
+mpv/
+kdenlive-layoutsrc
+kdenliverc

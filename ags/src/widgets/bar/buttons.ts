@@ -32,6 +32,25 @@ export const ToolsTray = () =>
                 onClicked: async () =>
                     await Utils.execAsync(Config.commands.colorPicker),
             }),
+
+            Widget.Button({
+                cursor: "pointer",
+                child: Widget.Icon({
+                    icon: idleState
+                        .bind()
+                        .as((state) =>
+                            state ? Icons.idlehint.on : Icons.idlehint.off,
+                        ),
+                }),
+                onClicked: async () => {
+                    idleState.setValue(!idleState.value)
+                    await Utils.execAsync(
+                        idleState.value
+                            ? Config.commands.inhibit.on
+                            : Config.commands.inhibit.off,
+                    )
+                },
+            }),
             Widget.Button({
                 cursor: "pointer",
                 child: Widget.Icon().hook(Notifications, (self) => {

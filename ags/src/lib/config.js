@@ -5,7 +5,7 @@ Notification.forceTimeout = false
 export default {
     workspaceCount: 10,
     maxPopups: 5,
-    powerMenu: ["lock", "logout", "restart", "shutdown"],
+    powerMenu: ["lock", "logout", "suspend", "restart", "shutdown"],
 
     animation: {
         baseAnimation: 500,
@@ -29,8 +29,9 @@ export default {
         power: {
             shutdown: "systemctl poweroff",
             restart: "systemctl reboot",
+            suspend: "systemctl suspend",
             logout: "hyprctl dispatch exit",
-            lock: "hyprlock",
+            lock: "loginctl lock-session",
         },
     },
 }
